@@ -14,6 +14,10 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		7699B88040F8A987B510C191 /* libPods-ContactList-ContactListTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-ContactList-ContactListTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		B49282912A16543F00EB82B7 /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B492828D2A16543F00EB82B7 /* FontAwesome.ttf */; };
+		B49282922A16543F00EB82B7 /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B492828E2A16543F00EB82B7 /* MaterialIcons.ttf */; };
+		B49282932A16543F00EB82B7 /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B492828F2A16543F00EB82B7 /* Ionicons.ttf */; };
+		B49282942A16543F00EB82B7 /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B49282902A16543F00EB82B7 /* Foundation.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +47,10 @@
 		5DCACB8F33CDC322A6C60F78 /* libPods-ContactList.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ContactList.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = ContactList/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-ContactList-ContactListTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ContactList-ContactListTests.release.xcconfig"; path = "Target Support Files/Pods-ContactList-ContactListTests/Pods-ContactList-ContactListTests.release.xcconfig"; sourceTree = "<group>"; };
+		B492828D2A16543F00EB82B7 /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = FontAwesome.ttf; path = ContactList/FontAwesome.ttf; sourceTree = "<group>"; };
+		B492828E2A16543F00EB82B7 /* MaterialIcons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = MaterialIcons.ttf; path = ContactList/MaterialIcons.ttf; sourceTree = "<group>"; };
+		B492828F2A16543F00EB82B7 /* Ionicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Ionicons.ttf; path = ContactList/Ionicons.ttf; sourceTree = "<group>"; };
+		B49282902A16543F00EB82B7 /* Foundation.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Foundation.ttf; path = ContactList/Foundation.ttf; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -92,6 +100,10 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				B492828D2A16543F00EB82B7 /* FontAwesome.ttf */,
+				B49282902A16543F00EB82B7 /* Foundation.ttf */,
+				B492828F2A16543F00EB82B7 /* Ionicons.ttf */,
+				B492828E2A16543F00EB82B7 /* MaterialIcons.ttf */,
 			);
 			name = ContactList;
 			sourceTree = "<group>";
@@ -242,8 +254,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B49282932A16543F00EB82B7 /* Ionicons.ttf in Resources */,
+				B49282922A16543F00EB82B7 /* MaterialIcons.ttf in Resources */,
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
+				B49282942A16543F00EB82B7 /* Foundation.ttf in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				B49282912A16543F00EB82B7 /* FontAwesome.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

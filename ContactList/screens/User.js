@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   StyleSheet,
   Text,
@@ -13,6 +13,54 @@ import colors from '../utils/colors';
 import { fetchUserContact } from '../utils/api';
 import store from '../store';
 
+const User = (props) => {
+
+  const appState = store.getState();
+  const [user, setUser] = useState(appState.user);
+  const [loading, setLoading] = useState(appState.isFetchingUser);
+  const [error, setError] = useState(appState.error);
+
+  useEffect(() => {
+
+    const unsubscribe = store.onChange(() => {
+      setUser(store.getState().user);
+      setLoading(store.getState().isFetchingUser);
+      setError(store.getState().error);
+    });
+
+    async function fetchData() {
+      const user = await fetchUserContact();
+      store.setState({ user, isFetchingUser: false });
+    }
+    fetchData();
+
+    return (() => {
+      unsubscribe()
+    })
+
+  }, []);
+
+  const { avatar, name, phone } = user;
+
+  return (
+    <View style={styles.container}>
+      {loading && <ActivityIndicator size="large" />}
+      {error && <Text>Error...</Text>}
+
+      {!loading && (
+        <ContactThumbnail
+          avatar={avatar}
+          name={name}
+          phone={phone}
+        />
+      )}
+    </View>
+  );
+}
+
+export default User;
+
+/*
 export default class User extends React.Component {
   static navigationOptions = ({ navigation: { navigate } }) => ({
     title: 'Me',
@@ -74,6 +122,7 @@ export default class User extends React.Component {
     );
   }
 }
+*/
 
 const styles = StyleSheet.create({
   container: {
