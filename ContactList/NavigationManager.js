@@ -2,7 +2,7 @@ import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import Icon from 'react-native-vector-icons/FontAwesome';
+import Icon from 'react-native-vector-icons/MaterialIcons';
 
 import Favorites from './screens/Favorites';
 import Contacts from './screens/Contacts';
@@ -12,9 +12,9 @@ import Options from './screens/Options';
 
 import colors from './utils/colors';
 
-const getTabBarIcon = icon => ({ tintColor }) => (
-  <Icon name={icon} size={26} style={{ color: tintColor }} />
-);
+const getTabBarIcon = (icon) => {
+  return <Icon name={icon} size={26} style={{ color: colors.blue }} />
+};
 
 const ContactsStack = createNativeStackNavigator();
 const ContactsStackScreen = () => {
@@ -50,10 +50,10 @@ const Tab = createBottomTabNavigator();
 const NavigationManager = () => {
   return (
     <NavigationContainer>
-      <Tab.Navigator screenOptions={{ headerShown: false }}>
-        <Tab.Screen name="Contact" component={ContactsStackScreen} />
-        <Tab.Screen name="Favorite" component={FavoritesStackScreen} />
-        <Tab.Screen name="Setting" component={UserStackScreen} />
+      <Tab.Navigator screenOptions={{ headerShown: false, tabBarShowLabel: false, tabBarStyle: [{ "display": "flex" }] }} >
+        <Tab.Screen name="Contact" component={ContactsStackScreen} options={{ tabBarIcon: () => getTabBarIcon('list') }} />
+        <Tab.Screen name="Favorite" component={FavoritesStackScreen} options={{ tabBarIcon: () => getTabBarIcon('star') }} />
+        <Tab.Screen name="Setting" component={UserStackScreen} options={{ tabBarIcon: () => getTabBarIcon('person') }} />
       </Tab.Navigator>
     </NavigationContainer>
   );
